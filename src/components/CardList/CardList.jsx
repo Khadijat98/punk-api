@@ -8,7 +8,7 @@ const CardList = () => {
     return <Card key={beer.id} name={beer.name} imageURL={beer.image_url} brewDate={beer.first_brewed} alcoholStrength={beer.abv}/>
   })
 
-  return <div>
+  return <div className="beer-cardlist">
     {cardListJSX}
   </div>
 

@@ -4,10 +4,10 @@ import './App.scss';
 
 const App = () => {
 
-  return <>
-    <Main />
+  return <div className="app">
     <Navbar />
-  </>
+    <Main />
+  </div>
 }
 
 export default App;

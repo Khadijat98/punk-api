@@ -1,0 +1,18 @@
+.beer-cardlist {
+  
+  @media only screen and (min-width: 490px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media only screen and (min-width: 1600px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
