@@ -4,7 +4,7 @@ import "./FilterItem.scss";
 const FilterItem = (props) => {
   const {name} = props;
 
-  return <div>
+  return <div className="filter-item">
     <label htmlFor={name}>{name}</label>
     <input type="checkbox" name={name} id="" />
   </div>

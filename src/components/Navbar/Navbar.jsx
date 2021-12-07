@@ -10,7 +10,9 @@ const Navbar = (props) => {
           <nav className="navbar">
             <h1 className="navbar__heading">Punk API</h1>
             <SearchBox name={"beer cards"} searchTerm={searchTerm} handleInput={handleInput}/>
-            <FiltersList />
+            <div className="navbar__filter-list">
+              <FiltersList />
+            </div>
           </nav>
         </div>
        
