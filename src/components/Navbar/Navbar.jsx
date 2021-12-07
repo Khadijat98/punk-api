@@ -1,5 +1,6 @@
 import React from "react";
 import SearchBox from "../SearchBox/SearchBox";
+import FiltersList from "../FiltersList/FiltersList";
 import "./Navbar.scss";
 
 const Navbar = (props) => {
@@ -7,8 +8,9 @@ const Navbar = (props) => {
   
   return <div>
           <nav className="navbar">
-          <h1 className="navbar__heading">Punk API</h1>
-          <SearchBox name={"beer cards"} searchTerm={searchTerm} handleInput={handleInput}/>
+            <h1 className="navbar__heading">Punk API</h1>
+            <SearchBox name={"beer cards"} searchTerm={searchTerm} handleInput={handleInput}/>
+            <FiltersList />
           </nav>
         </div>
        
