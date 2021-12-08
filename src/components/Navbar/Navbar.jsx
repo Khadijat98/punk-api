@@ -4,14 +4,14 @@ import FiltersList from "../FiltersList/FiltersList";
 import "./Navbar.scss";
 
 const Navbar = (props) => {
-  const {searchTerm, handleInput} = props
+  const {searchTerm, handleInput, checkOne, checkTwo, checkThree} = props
   
   return <div>
           <nav className="navbar">
             <h1 className="navbar__heading">Punk API</h1>
-            <SearchBox name={"beer cards"} searchTerm={searchTerm} handleInput={handleInput}/>
+            <SearchBox name={"beer cards"} searchTerm={searchTerm} handleInput={handleInput} />
             <div className="navbar__filter-list">
-              <FiltersList />
+              <FiltersList checkOne={checkOne} checkTwo={checkTwo} checkThree={checkThree}/>
             </div>
           </nav>
         </div>

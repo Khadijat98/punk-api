@@ -2,14 +2,15 @@ import React from "react";
 import FilterItem from "../FilterItem/FilterItem";
 import "./FiltersList.scss";
 
-const FiltersList = () => {
-  
+const FiltersList = (props) => {
+  const {checkOne, checkTwo, checkThree} = props;
+ 
   return (
     
-      <div>
-        <FilterItem name={"High ABV (> 6.0%)"}/>
-        <FilterItem name={"Classic Range"}/>
-        <FilterItem name={"Acidic (ph < 4)"}/>
+      <div className="filters-list" >
+        <FilterItem label={"High ABV (> 6.0%)"} onChange={checkOne}/>
+        <FilterItem label={"Classic Range"} onChange={checkTwo}/>
+        <FilterItem label={"Acidic (ph < 4)"} onChange={checkThree}/>
       </div>
     
   )
