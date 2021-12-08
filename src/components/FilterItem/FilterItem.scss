@@ -1,5 +1,11 @@
 .filter-item {
-  display: grid;
-  grid-template-columns: 17fr 1fr;
-  padding: 10px 0px;
+  display: none;
+
+  @media only screen and (min-width: 770px) {
+    display: grid;
+    grid-template-columns: 17fr 1fr;
+    padding: 10px 15px;
+    border: 1px solid black;
+  }
+
 }

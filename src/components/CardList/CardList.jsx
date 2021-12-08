@@ -6,7 +6,7 @@ const CardList = (props) => {
 const {beerArray} = props;
 
   const beerCardList = beerArray.map((beer) => {
-    return <Card key={beer.id} name={beer.name} imageURL={beer.image_url} brewDate={beer.first_brewed} alcoholStrength={beer.abv}/>
+    return <Card key={beer.id} name={beer.name} imageURL={beer.image_url} brewDate={beer.first_brewed} alcoholStrength={beer.abv}/>  
   })
 
   return <div className="beer-cardlist">

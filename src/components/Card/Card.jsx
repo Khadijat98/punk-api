@@ -6,9 +6,15 @@ const Card = (props) => {
 
   return <div className="beer-card">
     <img src={imageURL} alt={name} className="beer-card__image"/>
-    <h3 className="beer-card__name">{name}</h3>
-    <p className="beer-card__date">Brew Date: {brewDate}</p>
-    <p className="beer-card__strength">Alcohol by Volume: {alcoholStrength}</p>
+    <br />
+    
+      {/* <div className="beer-card__header">
+      </div> */}
+      <div className="beer-card__text">
+        <h3 className="beer-card__text--name">{name}</h3>
+        <p className="beer-card__text--date">Brew Date: {brewDate}</p>
+        <p className="beer-card__text--strength">ABV: {alcoholStrength}</p>
+      </div>
   </div>
 
 }
