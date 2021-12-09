@@ -1,7 +1,5 @@
 import React from "react";
 import CardList from "../CardList/CardList";
-import "./Main.scss";
-
 
 const Main = (props) => {
   const {beerArray} = props;

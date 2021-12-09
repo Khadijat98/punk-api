@@ -1,3 +1,5 @@
+@use "../../assets/sass/variables" as *;
+
 .filter-item {
   display: none;
 
@@ -5,7 +7,7 @@
     display: grid;
     grid-template-columns: 17fr 1fr;
     padding: 10px 15px;
-    border: 1px solid black;
+    border: 1px solid $color-black;
   }
 
 }
