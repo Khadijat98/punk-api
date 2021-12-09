@@ -6,44 +6,37 @@ import { useState, useEffect } from 'react';
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [beerArray, setBeerArray] = useState([]);
-  const [URLaddition, setURLaddition] = useState("");
+  const [URLparam, setURLparam] = useState("");
+  const [unfilteredBeerObj, setUnfilteredBeerObj] = useState("");
 
   const checkOne = (event) => {
     const isCheckBoxOne = event.target.checked;
-    isCheckBoxOne ? setURLaddition("abv_gt=6") : setURLaddition("");
+    isCheckBoxOne ? setURLparam("abv_gt=6") : setURLparam("");
   }
 
   const checkTwo = (event) => {
     const isCheckBoxTwo = event.target.checked;
-    isCheckBoxTwo ? setURLaddition("brewed_before=01-2010") : setURLaddition("");
+    isCheckBoxTwo ? setURLparam("brewed_before=01-2010") : setURLparam("");
   }
 
   const checkThree = (event) => {
     const isCheckBoxThree = event.target.checked;
-    console.log(isCheckBoxThree);
+    const acidicBeer = beerArray.filter(beer => {return beer.ph < 4})
 
-    if (isCheckBoxThree) {
-      const filteredByBeerPh = beerArray.filter(beer => {
-        const acidicBeer = (beer.ph < 4)
-        setURLaddition(beer.ph)
-        return acidicBeer;
-      })
-
-      return filteredByBeerPh;
-    } 
+    isCheckBoxThree ? setBeerArray(acidicBeer) : setBeerArray(unfilteredBeerObj);
   }
 
   useEffect(() => {
-    const URL = `https://api.punkapi.com/v2/beers?${URLaddition}`;
+    const URL = `https://api.punkapi.com/v2/beers?${URLparam}`;
     fetch(URL)
     .then(response => {
       return response.json();
     })
     .then(beerObject => {
       setBeerArray(beerObject);
-      console.log(beerObject)
+      setUnfilteredBeerObj(beerObject);
     })
-  }, [URLaddition])
+  }, [URLparam])
 
   const handleInput = (event) => {
     const searchInput = event.target.value.toLowerCase();

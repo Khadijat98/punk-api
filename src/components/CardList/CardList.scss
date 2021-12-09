@@ -1,7 +1,6 @@
 @use "../../assets/sass/typography";
 
 .beer-cardlist {
-  height: 100%;
   
   @media only screen and (min-width: 490px) {
     display: grid;
