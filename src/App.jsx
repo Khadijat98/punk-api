@@ -47,14 +47,14 @@ const App = () => {
 
   const checkThree = (event) => {
     const isCheckBoxThree = event.target.checked;
-    const acidicBeer = beerArray.filter(beer => {return beer.ph < 4})
+    const acidicBeer = beerArray.filter(beer => {return beer.ph < 4 && beer.ph !== null})
 
     isCheckBoxThree ? setBeerArray(acidicBeer) : setBeerArray(unfilteredBeerObj);
     
   }; 
 
   useEffect(() => {
-    const URL = `https://api.punkapi.com/v2/beers?${URLparam}`;
+    const URL = `https://api.punkapi.com/v2/beers?per_page=28&${URLparam}`;
     fetch(URL)
     .then(response => {
       return response.json();
