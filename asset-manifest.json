@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/punk-api/static/css/main.fc7c0479.chunk.css",
-    "main.js": "/punk-api/static/js/main.8c7531f6.chunk.js",
-    "main.js.map": "/punk-api/static/js/main.8c7531f6.chunk.js.map",
+    "main.js": "/punk-api/static/js/main.db670cc6.chunk.js",
+    "main.js.map": "/punk-api/static/js/main.db670cc6.chunk.js.map",
     "runtime-main.js": "/punk-api/static/js/runtime-main.4e4b9e05.js",
     "runtime-main.js.map": "/punk-api/static/js/runtime-main.4e4b9e05.js.map",
     "static/js/2.eac3a2e0.chunk.js": "/punk-api/static/js/2.eac3a2e0.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.4e4b9e05.js",
     "static/js/2.eac3a2e0.chunk.js",
     "static/css/main.fc7c0479.chunk.css",
-    "static/js/main.8c7531f6.chunk.js"
+    "static/js/main.db670cc6.chunk.js"
   ]
 }
