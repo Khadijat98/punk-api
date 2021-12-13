@@ -1,5 +1,5 @@
 # Punk API
-** Made by Khadijat Oyeleye**
+**Made by Khadijat Oyeleye**
 
 This is an app which draws, searches and filters through information from the Punk API using React. It is styled with SCSS.
 
