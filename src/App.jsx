@@ -8,8 +8,10 @@ const App = () => {
   const [beerArray, setBeerArray] = useState([]);
   const [URLparam, setURLparam] = useState("");
   const [unfilteredBeerObj, setUnfilteredBeerObj] = useState("");
+  // const [highAcidityArray, setHighAcidityArray] = useState([]);
+  // const [checkBoxThree, setCheckBoxThree] = useState(false);
 
-  const checkOne = (event) => {
+  const checkHighABV = (event) => {
     const isCheckBoxOne = event.target.checked;
 
     if (isCheckBoxOne) {
@@ -27,7 +29,7 @@ const App = () => {
     };
   };
 
-  const checkTwo = (event) => {
+  const checkClassicRange = (event) => {
     const isCheckBoxTwo = event.target.checked;
 
     if (isCheckBoxTwo) {
@@ -45,8 +47,10 @@ const App = () => {
     };
   };
 
-  const checkThree = (event) => {
+  const checkHighAcidity = (event) => {
     const isCheckBoxThree = event.target.checked;
+    // setCheckBoxThree(!checkBoxThree);
+
     const acidicBeer = beerArray.filter(beer => {return beer.ph < 4 && beer.ph !== null})
 
     isCheckBoxThree ? setBeerArray(acidicBeer) : setBeerArray(unfilteredBeerObj);
@@ -60,6 +64,9 @@ const App = () => {
       return response.json();
     })
     .then(beerObject => {
+      // const highAcidity = beerObject.filter = (beer) => {
+      //   beerArray.filter(beer => {return beer.ph < 4 && beer.ph !== null})
+      // }
       setBeerArray(beerObject);
       setUnfilteredBeerObj(beerObject);
     })
@@ -77,7 +84,7 @@ const App = () => {
   }); 
 
   return <div className="app">
-    <Navbar searchTerm={searchTerm} handleInput={handleInput} checkOne={checkOne} checkTwo={checkTwo} checkThree={checkThree}/>
+    <Navbar searchTerm={searchTerm} handleInput={handleInput} checkOne={checkHighABV} checkTwo={checkClassicRange} checkThree={checkHighAcidity}/>
     <Main beerArray={filteredBeerCards}/>
   </div>
 }
